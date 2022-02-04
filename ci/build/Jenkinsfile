@@ -1,0 +1,38 @@
+pipeline {
+  agent {
+    docker 'circleci/node:14.18.1-bullseye-browsers'
+  }
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout([
+          $class: 'GitSCM',
+          branches: [[
+            name: '*/master'
+          ]],
+          doGenerateSubmoduleConfigurations: false,
+          userRemoteConfigs: [[
+            credentialsId: '',
+            url: ''
+          ]]
+        ])
+        sh 'npm ci --no-cache'
+      }
+    }
+    stage('Lint') {
+      steps {
+        sh 'npm run lint'
+      }
+    }
+    stage('Unit Tests') {
+      steps {
+        sh 'npm run test'
+      }
+    }
+    stage('Audit Tests') {
+      steps {
+        sh 'npm run lh:audit'
+      }
+    }
+  }
+}
