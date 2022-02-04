@@ -9,11 +9,9 @@
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "clean": "rimraf build/ .lighthouseci/",
-    "lh:wizard": "lhci wizard",
-    "lh:audit": "lhci autorun --config=test/lighthouserc.json",
+    "audit": "jest --config test/jest.config.js",
     "build": "ng build",
-    "release": "docker build -f ci/docker/Dockerfile -t angular13 .",
-    "ng": "ng"
+    "release": "docker build -f ci/docker/Dockerfile -t angular13 ."
   },
   "dependencies": {
     "@angular/animations": "13.1.0",
@@ -46,9 +44,11 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
-    "jest": "^27.4.7",
     "jest-marbles": "^3.0.2",
+    "jest": "^27.4.7",
+    "lighthouse": "^8.6.0",
     "rimraf": "^3.0.2",
+    "testcontainers": "^7.11.1",
     "ts-node": "^10.4.0",
     "typescript": "~4.5.2"
   }

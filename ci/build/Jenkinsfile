@@ -31,7 +31,7 @@ pipeline {
     }
     stage('Audit Tests') {
       steps {
-        sh 'npm run lh:audit'
+        sh 'npm run audit'
       }
     }
   }
