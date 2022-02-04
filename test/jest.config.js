@@ -17,5 +17,15 @@ module.exports = {
     'ts-jest': {
       tsconfig: './tsconfig.spec.json',
     },
-  }
+  },
+  reporters: [
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        publicPath: './build/audit',
+        filename: 'index.html',
+      },
+    ],
+  ]
 };

@@ -35,5 +35,5 @@ async function launchChromeAndRunLighthouse(url, flags = {}, config = desktop) {
 }
 
 module.exports = {
-  launchChromeAndRunLighthouse: launchChromeAndRunLighthouse,
+  launchChromeAndRunLighthouse,
 };

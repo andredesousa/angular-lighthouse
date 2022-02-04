@@ -1,7 +1,8 @@
 # Angular Lighthouse
 
-[Lighthouse](https://github.com/GoogleChrome/lighthouse) is an open-source, automated tool for improving the performance, quality, and correctness of your web sites.
-This project provides a basic setup for auditing websites using Google Lighthouse.
+This project provides a basic setup for auditing websites using [Lighthouse](https://github.com/GoogleChrome/lighthouse).
+Lighthouse is an open-source, automated tool for improving the performance, quality, and correctness of your web sites.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13 and [Node.js](https://nodejs.org/en/about/releases) version 14.
 
 ## Overview
 
@@ -29,9 +30,18 @@ Linters are also excellent tools for finding certain classes of bugs, such as th
 Use `npm run lint` to analyze your code.
 Many problems can be automatically fixed with `npm run lint:fix`.
 
+## Running unit tests
+
+Unit tests are responsible for testing of individual functions or classes by supplying input and making sure the output is as expected.
+Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/).
+Run `npm run test:watch` to keep executing unit tests in real time while watching for file changes in the background.
+
+You can see the HTML coverage report opening the [index.html](build/coverage/lcov-report/index.html) file in your web browser.
+Code coverage measures and reports the number of executed code lines covered by automated tests.
+
 ## Running audit tests
 
-Use `npm run test` to execute the audit tests via Lighthouse.
+Use `npm run audit` to execute the audit tests via Lighthouse.
 
 After running the audit of your webpage, Lighthouse will generate a report on 4 different areas:
 
@@ -40,7 +50,7 @@ After running the audit of your webpage, Lighthouse will generate a report on 4 
 - **Best Practices** identifies any web development element that does not follow best practices.
 - **SEO** highlights the most essential SEO issues with the webpage.
 
-The HTML report is available in the `.lighthouseci` folder and you can opening it in your web browser.
+The HTML report is available in the `build/audit` folder and you can opening it in your web browser.
 Lighthouse generates a HTML file for each page.
 
 ## Reference documentation
