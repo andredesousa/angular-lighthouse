@@ -1,7 +1,7 @@
 const chromeLauncher = require('chrome-launcher');
 const lighthouse = require('lighthouse');
-const ReportGenerator = require('lighthouse/report/generator/report-generator');
 const desktop = require('lighthouse/lighthouse-core/config/desktop-config')
+const ReportGenerator = require('lighthouse/report/generator/report-generator');
 const fs = require('fs');
 
 /**
@@ -19,7 +19,7 @@ async function launchChromeAndRunLighthouse(url, flags = {}, config = desktop) {
 }
 
 /**
- * Returns the standalone report HTML as a string with the report JSON.
+ * Generates the standalone report HTML with the report JSON.
  * @param {string} filename
  * @param {LHResult} lhr
  */
