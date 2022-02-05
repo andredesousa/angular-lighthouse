@@ -1,6 +1,6 @@
-# Angular Lighthouse
+# Auditing an Angular app with Google Lighthouse
 
-This project provides a basic setup for auditing websites using [Lighthouse](https://github.com/GoogleChrome/lighthouse).
+This project provides a basic setup for auditing Angular websites using [Lighthouse](https://github.com/GoogleChrome/lighthouse).
 Lighthouse is an open-source, automated tool for improving the performance, quality, and correctness of your web sites.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13 and [Node.js](https://nodejs.org/en/about/releases) version 14.
 
@@ -16,11 +16,16 @@ The scripts in [package.json](package.json) file were built with simplicity in m
 
 The next scripts should be executed in a console inside the root directory:
 
+- `start` - Runs the application.
 - `check` - Runs all checks.
 - `lint` - Runs several static code analysis.
 - `lint:fix` - Applies lint rules to project code.
 - `test` - Runs the unit tests.
-- `clean` - Deletes the temporary files.
+- `test:watch` - Runs the unit tests.
+- `test` - Runs the unit tests.
+- `audit` - Runs the audit tests.
+- `build` - Builds the dist files.
+- `release` - Builds an Docker image.
 
 For more details, read the [npm scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts) documentation.
 
@@ -41,12 +46,12 @@ Code coverage measures and reports the number of executed code lines covered by 
 
 ## Running audit tests
 
-Use `npm run audit` to execute the audit tests via Lighthouse.
+Use `npm run audit` to execute the audit tests via Lighthouse and Testcontainers.
 
 After running the audit of your webpage, Lighthouse will generate a report on 4 different areas:
 
 - **Performance** includes elements that slow your page down, including images and resources.
-- **Accessibility** audits how accessible your content is to users, including the use of assistive technology. 
+- **Accessibility** audits how accessible your content is to users, including the use of assistive technology.
 - **Best Practices** identifies any web development element that does not follow best practices.
 - **SEO** highlights the most essential SEO issues with the webpage.
 

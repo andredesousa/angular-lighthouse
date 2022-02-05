@@ -7,7 +7,7 @@
 module.exports = {
   rootDir: '../',
   testEnvironment: 'node',
-  testMatch: ['<rootDir>/test/specs/**/*.spec.js'],
+  testMatch: ['<rootDir>/test/specs/**/*.spec.ts'],
   testTimeout: 60000,
   moduleFileExtensions: ['js', 'json', 'ts'],
   transform: {
@@ -15,17 +15,7 @@ module.exports = {
   },
   globals: {
     'ts-jest': {
-      tsconfig: './tsconfig.spec.json',
+      tsconfig: '<rootDir>/test/tsconfig.json',
     },
-  },
-  reporters: [
-    'default',
-    [
-      'jest-html-reporters',
-      {
-        publicPath: './build/audit',
-        filename: 'index.html',
-      },
-    ],
-  ]
+  }
 };
