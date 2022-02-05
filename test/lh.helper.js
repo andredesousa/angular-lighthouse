@@ -1,34 +1,8 @@
 const chromeLauncher = require('chrome-launcher');
 const lighthouse = require('lighthouse');
 const ReportGenerator = require('lighthouse/report/generator/report-generator');
+const desktop = require('lighthouse/lighthouse-core/config/desktop-config')
 const fs = require('fs');
-
-/**
- * lighthouse desktop configuration.
- * @tutorial https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md
- * @type {LH.Config.Json}
- */
-const desktop = {
-  extends: 'lighthouse:default',
-  settings: {
-    formFactor: 'desktop',
-    screenEmulation: {
-      mobile: false,
-      width: 1920,
-      height: 1080,
-      deviceScaleFactor: 1,
-      disabled: false,
-    },
-    throttling: {
-      rttMs: 40,
-      throughputKbps: 10 * 1024,
-      cpuSlowdownMultiplier: 1,
-      requestLatencyMs: 0,
-      downloadThroughputKbps: 0,
-      uploadThroughputKbps: 0,
-    },
-  },
-};
 
 /**
  * Launch Google Chrome and run Lighthouse.

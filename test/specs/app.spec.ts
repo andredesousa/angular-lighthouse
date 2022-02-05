@@ -1,6 +1,6 @@
 import { GenericContainer, StartedTestContainer } from 'testcontainers';
 import { RunnerResult } from 'lighthouse/types/externs';
-import { launchChromeAndRunLighthouse, generateReportHtml } from '../lh.config.js';
+import { launchChromeAndRunLighthouse, generateReportHtml } from '../lh.helper.js';
 
 describe('Audit via Lighthouse', () => {
   let container: StartedTestContainer;

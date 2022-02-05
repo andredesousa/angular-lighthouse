@@ -67,3 +67,4 @@ For further reference, please consider the following articles:
 - [Measure the performance of a web application with Lighthouse CI](https://medium.com/tuimm/measure-performance-web-app-with-lighthouse-ci-in-a-gitlab-pipeline-dd292842e40d)
 - [A Performance and Optimization Tool for Webpages](https://betterprogramming.pub/lighthouse-a-performance-and-optimization-tool-for-webpages-e0b4eeaef3e4)
 - [Automating Google Lighthouse audits](https://keepinguptodate.com/pages/2021/07/automating-google-lighthouse-upload-to-azure/)
+- [Run Lighthouse programmatically as a Node module](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md)
