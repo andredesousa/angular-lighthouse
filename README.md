@@ -25,7 +25,7 @@ The next scripts should be executed in a console inside the root directory:
 - `test` - Runs the unit tests.
 - `audit` - Runs the audit tests.
 - `build` - Builds the dist files.
-- `release` - Builds an Docker image.
+- `release` - Builds the Docker image.
 
 For more details, read the [npm scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts) documentation.
 
@@ -46,7 +46,9 @@ Code coverage measures and reports the number of executed code lines covered by 
 
 ## Running audit tests
 
-Use `npm run audit` to execute the audit tests via Lighthouse and Testcontainers.
+Use `npm run audit` to execute the audit tests via [Lighthouse](https://github.com/GoogleChrome/lighthouse) and [Testcontainers](https://www.testcontainers.org/).
+First of all, you need to build the docker image to start the container during testing.
+You can use `npm run release` command for this purpose.
 
 After running the audit of your webpage, Lighthouse will generate a report on 4 different areas:
 
