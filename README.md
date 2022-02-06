@@ -22,7 +22,6 @@ The next scripts should be executed in a console inside the root directory:
 - `lint:fix` - Applies lint rules to project code.
 - `test` - Runs the unit tests.
 - `test:watch` - Runs the unit tests.
-- `test` - Runs the unit tests.
 - `audit` - Runs the audit tests.
 - `build` - Builds the dist files.
 - `release` - Builds the Docker image.
