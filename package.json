@@ -7,10 +7,13 @@
     "check": "npm run lint && npm run test",
     "test": "ng test",
     "test:watch": "ng test --watch",
+    "test:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "clean": "rimraf build/ .lighthouseci/",
     "audit": "jest --config test/jest.config.js",
+    "audit:watch": "jest --config test/jest.config.js --watch",
+    "audit:debug": "node --inspect-brk node_modules/jest/bin/jest.js --config test/jest.config.js --runInBand",
     "build": "ng build",
     "prerelease": "npm run build",
     "release": "docker build -f ci/docker/Dockerfile -t angular13 ."
